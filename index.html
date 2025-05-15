@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prices in North Carolina</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&family=Nothing+You+Could+Do&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=VT323&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/porter-sans-block" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body onload="getYear(
+)">
+  <img id="background-1" src="wall.jpeg" alt="white brick wall with a wooden table or shelf emerging from the bottom">
+  <img id="background-2" src="wallcrop.jpeg"
+    alt="white brick wall with a wooden table or shelf emerging from the bottom">
+  <img id="background-3" src="wallcrop.jpeg"
+    alt="white brick wall with a wooden table or shelf emerging from the bottom">
+  <div id="receipt-modal" class="modal">
+    <div class="receipt-modal-content">
+      <span id="close-receipt" class="close-modal" onclick="closeModal()">&times;</span>
+      <div id="receipt-modal-text">
+
+        <h3 id="category-title">CATEGORY</h3>
+        <h4 id="receipt-year">Year</h4>
+        <p>===========</p>
+        <span id="category-article">Rasbora grenadier peladillo pigfish rock cod eagle ray. Lake chub bowfin, sea raven,
+          pumpkinseed roosterfish
+          scorpionfish white shark pollyfish pompano beachsalmon damselfish ladyfish guitarfish. Deepwater flathead,
+          tetra
+          Atlantic salmon cat shark? Arapaima pollyfish alligatorfish; grayling; Norwegian Atlantic salmon whitefish
+          mullet, "rudd Black tetra jackfish kahawai; surf sardine peladillo tailor?" Parrotfish duckbilled barracudina
+          nase hardhead catfish pompano red velvetfish silverside, Sacramento blackfish; deep sea eel." California
+          smoothtongue spiderfish snubnose parasitic eel tilapia whale shark bonytail chub.
+          Pearl perch Oriental loach Australian grayling ide bent-tooth pirarucu, ribbon eel golden trout, tope seahorse
+          huchen. Sabertooth fish tadpole cod; cardinalfish Billfish goblin shark angler. Atka mackerel fingerfish,
+          burbot
+          dorab angelfish cownose ray, herring smelt slender mola, barfish armorhead catfish spookfish walking catfish
+          trevally. Pearl danio pigfish: mud minnow remora sabertooth fish carpetshark Pacific salmon rivuline crestfish
+          tapetail pikeperch cuchia.</span>
+        <p>===========</p>
+      </div>
+    </div>
+  </div>
+  <div id="overview">
+    <img src="frame.png" alt="black shiny picture frame">
+    <div id="overview-background"></div>
+    <div id="overview-content">
+      <h2>
+        Prices in North Carolina
+      </h2>
+      <p>
+        Over the past several years, North Carolinians have seen an increase in prices across many spending categories.
+        Of course, such increases are not unique to North Carolina, or even to the United States – the impact of the
+        COVID-19 Pandemic has been felt economically across the world. This web app tells the story of prices and their
+        political impact in North Carolina since 2020.</p>
+
+      <h3>2020</h3>
+      <p>North Carolinians started 2020 with expectations of continued improvement in economic conditions. Consumer
+        sentiment was relatively high, employment was stable, and talk of inflation or rising prices was scarce. When
+        the COVID-19 Pandemic hit, this rosy picture was shaken. While prices didn’t immediately rise (and indeed fell
+        in some categories, such as gas), the pandemic registered as an immediate economic threat. In response to
+        widespread increases in unemployment and other severe economic impacts, Congress passed significant stimulus
+        that included direct cash benefits – stimulus that very successfully curbed the economic fallout in comparison
+        to other countries. However, this infusion of money, along with pandemic-induced shocks to supply chains, caused
+        inflationary pressures that played out over the years to come.</p>
+      <h3>2022</h3>
+      <p>By 2022, the word “inflation” was on everyone’s lips. Compared to zero headlines mentioning “inflation” in
+        2020,
+        the Raleigh News & Observer ran 60 articles in 2022 that included the word “inflation” in the headline. This
+        increase in attention was reasonable: prices had shot up, in North Carolina and across the country, and rates of
+        inflation were high. Beyond being a concern for people’s pocketbooks, inflation had also emerged as a hot
+        political issue just in time for the midterm elections. Congress passed a cornerstone of Joe Biden’s legislative
+        platform: the Inflation Reduction Act. Drug pricing reform, investment in American clean energy initiatives, and
+        increased taxes on corporations and the wealthy were key provisions in the IRA. Consumer discontent, however,
+        continued to rise along with prices.</p>
+      <h3>2024</h3>
+      <p>While inflation began to slow as Biden neared the end of his term, economic sentiment remained poor. Inflation
+        remained a charged topic in advance of 2024 election. Republicans hammered Biden on prices and Donald Trump made
+        sweeping promises to lower prices, while Kamala Harris rolled out policy proposals aimed at alleviating costs.
+        Despite lowering rates of inflation and overall strong growth in real wages (and therefore purchasing power),
+        voters expressed strongly negative views about the economy. Donald Trump’s reelection in November 2024 was in
+        line with a worldwide anti-incumbent backlash, which many experts attributed to inflation.</p>
+      <h3>2025</h3>
+      <p>Though discontent over inflation helped propel Donald Trump to a second term, voters are already realizing that
+        his promise to "bring prices down starting on Day One” was all talk. Instead, Trump has pursued tariff policies
+        likely to dramatically increase prices across a range of consumer categories. North Carolina families
+        regularly buy products that come from Mexico, Canada, China, and Europe – products that will now be hit with
+        tariffs ranging from 10% to over 100%. The capriciousness of Trump’s economic policies has also caused
+        uncertainty: since Trump's inauguration, consumer sentiment has fallen, and more North Carolinians expect a
+        recession in the near term.</p>
+
+    </div>
+  </div>
+  <div id="instructions">
+    <img src="hangingnote.png" alt="white sheet of paper hanging from string on a red thumbtack">
+    <p id="instructions-content">Click on each item to learn about prices in each spending category. Click the left and
+      right arrows on the calendar to explore different years.</p>
+  </div>
+  <div id="calendar">
+    <img id="deskcalendar" src="deskcalendar.png" alt="spiral bound desk calendar">
+    <img id="wallcalendar" src="wallcalendarwithnail.png" alt="spiral bound wall calendar">
+    <div id="calendar-contents">
+      <!--these svgs are vestigial arrows; I couldn't get them to be clickable, so I recreated svgs in the svg layer since my other svgs over the images were working-->
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 29 44">
+        <path d="M0.351013 24.4069L28.3881 43.6873L24.6141 0.550796L0.351013 24.4069Z" />
+      </svg>
+      <div id="year">
+        2024</div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 29 44">
+        <path d="M28.0883 20.5142L3.00742 43.509L0.741204 0.267056L28.0883 20.5142Z" />
+      </svg>
+    </div>
+  </div>
+  <div id="svg-layer">
+    <svg id="leftarrow-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 46" onclick="decreaseYear()"
+      onmouseover="arrowHover('leftarrow-svg')" onmouseleave="arrowNoHover('leftarrow-svg')">
+      <path d="M29 44L26 1.5L1.5 24.5L29 44Z" />
+    </svg>
+    <svg id="rightarrow-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 29 45" onclick="increaseYear()"
+      onmouseover="arrowHover('rightarrow-svg')" onmouseleave="arrowNoHover('rightarrow-svg')">
+      <path d="M4.5 43.5L1.5 1.5L28 21.5L4.5 43.5Z" />
+    </svg>
+    <svg id="lamp-svg" title="Energy" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 254 353"
+      onclick="displayReceipt('ENERGY')" onmouseover="mouseOverThingy('lamp-img')"
+      onmouseleave="mouseAwayThingy('lamp-img')">
+      <title>Energy *Coming Soon*</title>
+      <path
+        d="M108 317V287L176.5 284.5V176.5L169.5 150.5L143.5 108.5V117.5L127 166L105.5 176.5L65.5 166L18.5 126L1.5 87L6.5 62.5L44.5 38.5L86.5 34L124.5 0.5H147L164 9.5L173.5 30.5L169.5 49.5L164 73L205.5 147L210 182V276L214.5 287L247.5 304L253 331L243.5 342H214.5L184.5 334L161 352L108 348L103.5 334L112.5 324.5L108 317Z" />
+    </svg>
+    <svg id="stethoscope-svg" title="Healthcare" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 286 135"
+      onclick="displayReceipt('HEALTHCARE')" onmouseover="mouseOverThingy('stethoscope-img')"
+      onmouseleave="mouseAwayThingy('stethoscope-img')">
+      <title>Healthcare *Coming Soon*</title>
+      <path
+        d="M21 107L43 99L7 53.5L1 39L4.5 28L17.5 22.5L19.5 13L41.5 6.5L54.5 1L63 3.5L67 14.5L97 21L140 19H180.5L239 30L276.5 53L284.5 99L276.5 104.5L258.5 105.5H217L190.5 93.5L166 99L136 85L109 99L77 94L43 134L21 126V107Z" />
+    </svg>
+    <svg id="books-svg" title="Education" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 252 199"
+      onclick="displayReceipt('EDUCATION')" onmouseover="mouseOverThingy('books-img')"
+      onmouseleave="mouseAwayThingy('books-img')">
+      <title>Education *Coming Soon*</title>
+      <path
+        d="M7 99.5L1 35.5L94.5 1L246.5 38V104.5V134L250.5 139L242 147V154L246.5 160.5L223 175.5L212 171L187.5 179.5L161.5 198L124 191L128 182L103.5 139H94.5L89 128H77L70 134L67.5 144L52 147L33 171L4.5 160.5L1 139L13 128L7 99.5Z" />
+    </svg>
+    <svg id="eggs-svg" title="Groceries" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 265 152">
+      <title>Groceries</title>
+      <path d="M235 118L157 151L13 102L1 65L44 9L73 15L104 1L130 15L151 9L182 21H221L264 77L243 89L235 118Z"
+        onclick="displayReceipt('GROCERIES')" onmouseover="mouseOverThingy('eggs-img')"
+        onmouseleave="mouseAwayThingy('eggs-img')" />
+
+    </svg>
+    <svg id="keys-svg" title="Housing" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 124 130"
+      onclick="displayReceipt('HOUSING')" onmouseover="mouseOverThingy('keys-img')"
+      onmouseleave="mouseAwayThingy('keys-img')">
+      <title>Housing</title>
+      <path
+        d="M23 129L1.5 126L15.5 101L28.5 92.5L31.5 84.5V63.5L25 55.5L48.5 21L67.5 18V9L74.5 0.5H85L89 12H97.5L122.5 53.5L116.5 63.5V82L113.5 103.5L71.5 115H48.5L37 117.5L23 129Z" />
+    </svg>
+    <svg id="car-svg" title="Transportation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 80"
+      onclick="displayReceipt('TRANSPORTATION')" onmouseover="mouseOverThingy('car-img')"
+      onmouseleave="mouseAwayThingy('car-img')">
+      <title>Transportation</title>
+      <path
+        d="M9 36L1 51L9 67L35 79H56L71 76.5L77.5 69.5L112 58L121 62L130 58L143 42L140 18L77.5 1.5L71 4.5L56 8.5L32 27L9 36Z" />
+    </svg>
+    <svg id="legos-svg" title="Childcare" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 126 89"
+      onclick="displayReceipt('CHILDCARE')" onmouseover="mouseOverThingy('legos-img')"
+      onmouseleave="mouseAwayThingy('legos-img')">
+      <title>Childcare *Coming Soon*</title>
+      <path d="M31 60L17 65L1.5 50.5L5.5 25.5L31 10L40 1.5L71 7.5H100L120.5 29L125 71L95.5 78L51 87.5L46 68.5L31 60Z" />
+    </svg>
+  </div>
+  <div id="lamp">
+    <img id="lamp-img" class="innerimage" src="lamp.png"
+      alt="Green desk lamp with a flexible black neck and green base">
+  </div>
+  <div id="stethoscope">
+    <img id="stethoscope-img" class="innerimage" src="stethoscope.png" alt="black and silver stethoscope">
+  </div>
+  <div id="books">
+    <img id="books-img" class="innerimage" src="books.png" alt="stack of four hardcover library books">
+  </div>
+  <div id="eggs">
+    <img id="eggs-img" class="innerimage" src="eggs.png" alt="half-dozen open-top carton of brown eggs">
+  </div>
+  <div id="keys">
+    <img id="keys-img" class="innerimage" src="housekeys.png"
+      alt="two gold keys on a large keychain with a cottage figurine">
+  </div>
+  <div id="car">
+    <img id="car-img" class="innerimage" src="car.png" alt="a small toy taxi">
+  </div>
+  <div id="legos">
+    <img id="legos-img" class="innerimage" src="legos.png" alt="a pile of five colorful small square legos">
+  </div>
+  <div id="sources" onclick="displaySources()">
+    <img class="innerimage" src="postit.png" alt="yellow post-it note slightly curled up at the bottom">
+    <p id="sources-label">Sources</p>
+  </div>
+  <div id="sources-modal" class="modal">
+    <div class="sources-modal-content">
+      <span id="close-sources" class="close-modal" onclick="closeModal()">&times;</span>
+      <!--these sources are a bit of a mess, but I just plopped them in here for now.-->
+      <div id="sources-modal-text">
+        <h3>Sources</h3>
+        <div class="csl-entry"><em>28% of North Carolina households remain burdened by housing costs &bull; NC
+            Newsline</em>. (n.d.). Retrieved April 24, 2025, from
+          https://ncnewsline.com/2025/01/17/28-of-north-carolina-households-remain-burdened-by-housing-costs/</div>
+        <div class="csl-entry"><em>AAA Fuel Prices</em>. (n.d.-a). Retrieved April 24, 2025, from
+          https://gasprices.aaa.com/?state=NC</div>
+        <div class="csl-entry"><em>AAA Fuel Prices</em>. (n.d.-b). Retrieved April 23, 2025, from
+          https://gasprices.aaa.com/?state=NC</div>
+        <div class="csl-entry"><em>All-Transactions House Price Index for North Carolina (NCSTHPI) | FRED | St. Louis
+            Fed</em>. (n.d.). Retrieved April 23, 2025, from https://fred.stlouisfed.org/series/NCSTHPI</div>
+        <div class="csl-entry"><em>Are wages keeping up with inflation? | USAFacts</em>. (n.d.). Retrieved April 24,
+          2025, from https://usafacts.org/answers/are-wages-keeping-up-with-inflation/country/united-states/</div>
+        <div class="csl-entry"><em>Bureau of Labor Statistics Data</em>. (n.d.-a). Retrieved April 24, 2025, from
+          https://data.bls.gov/pdq/SurveyOutputServlet</div>
+        <div class="csl-entry"><em>Bureau of Labor Statistics Data</em>. (n.d.-b). Retrieved April 24, 2025, from
+          https://data.bls.gov/pdq/SurveyOutputServlet</div>
+        <div class="csl-entry"><em>Bureau of Labor Statistics Data</em>. (n.d.-c). Retrieved April 24, 2025, from
+          https://data.bls.gov/pdq/SurveyOutputServlet</div>
+        <div class="csl-entry"><em>Central NC small business owners impacted by tariff uncertainty</em>. (n.d.).
+          Retrieved April 24, 2025, from
+          https://www.cbs17.com/news/local-news/wake-county-news/tariff-uncertainty-impacting-small-business-owners-in-central-north-carolina/
+        </div>
+        <div class="csl-entry"><em>Charlotte egg prices nearly triple in two months. Some grocery stores limit
+            purchases, Charlotte Observer, The (NC), February 23, 2025, p21A</em>. (n.d.). Retrieved April 23, 2025,
+          from
+          https://infoweb-newsbank-com.libproxy.lib.unc.edu/apps/news/document-view?p=AMNEWS&amp;t=pubname%3ACHOB%21Charlotte%2BObserver%252C%2BThe%2B%2528NC%2529&amp;sort=YMD_date%3AD&amp;hide_duplicates=2&amp;maxresults=60&amp;f=advanced&amp;val-base-0=prices&amp;fld-base-0=Title&amp;fld-nav-0=YMD_date&amp;val-nav-0=2025%20-%202025&amp;docref=news/19EEF6434896BB00
+        </div>
+        <div class="csl-entry"><em>Charlotte-area Latino food distributors begin to feel impact of Trump&rsquo;s tariffs
+            | WUNC</em>. (n.d.). Retrieved April 24, 2025, from
+          https://www.wunc.org/2025-04-25/charlotte-area-latino-food-distributors-begin-to-feel-impact-of-trumps-tariffs
+        </div>
+        <div class="csl-entry"><em>Consumer sentiment falls to lowest level since 2022</em>. (n.d.). Retrieved April 24,
+          2025, from https://myfox8.com/news/consumer-sentiment-falls-to-lowest-level-since-postpandemic-inflation-peak/
+        </div>
+        <div class="csl-entry"><em>Convening the Experts: Consumer Sentiment vs. Economic Indicators - Frank Hawkins
+            Kenan Institute of Private Enterprise</em>. (n.d.). Retrieved April 24, 2025, from
+          https://kenaninstitute.unc.edu/kenan-insight/convening-the-experts-consumer-sentiment-vs-economic-indicators/
+        </div>
+        <div class="csl-entry"><em>Coronavirus NC: Demand for gas at its lowest since 1993, prices drop to $1.76;/gallon
+            in North Carolina - ABC11 Raleigh-Durham</em>. (n.d.). Retrieved April 23, 2025, from
+          https://abc11.com/nc-gas-prices-near-me-in-north-carolina/6084077/</div>
+        <div class="csl-entry"><em>Cost Of Living In North Carolina | Bankrate</em>. (n.d.). Retrieved April 23, 2025,
+          from https://www.bankrate.com/real-estate/cost-of-living/in-north-carolina/#moving</div>
+        <div class="csl-entry">di Giovanni, J., Kalemli-&Ouml;zcan, Ş., Silva, A., Muhammed, |, Yıldırım, A., &amp;
+          Yıldırım, M. A. (n.d.). <em>Quantifying the Inflationary Impact of Fiscal Stimulus Under Supply
+            Constraints</em>. Retrieved April 24, 2025, from
+          https://www.newyorkfed.org/research/staff_reports/sr1050.html.</div>
+        <div class="csl-entry"><em>Egg prices are a real problem. - So where are the solutions, News &amp; Observer, The
+            (Raleigh, NC), March 4, 2025, p7A</em>. (n.d.). Retrieved April 24, 2025, from
+          https://infoweb-newsbank-com.libproxy.lib.unc.edu/apps/news/document-view?p=AMNEWS&amp;t=pubname%3ARLOB%21News%2B%2526%2BObserver%252C%2BThe%2B%2528Raleigh%252C%2BNC%2529&amp;sort=YMD_date%3AD&amp;fld-nav-0=YMD_date&amp;val-nav-0=2025%20-%202025&amp;hide_duplicates=2&amp;maxresults=60&amp;f=advanced&amp;offset=61&amp;val-base-0=prices&amp;fld-base-0=Title&amp;docref=news/19F1EDB43186BDD0
+        </div>
+        <div class="csl-entry"><em>Egg prices spike: Raleigh shoppers finding eggs below national average</em>. (n.d.).
+          Retrieved April 24, 2025, from
+          https://www.cbs17.com/news/local-news/wake-county-news/raleigh-shoppers-finding-eggs-below-national-average/
+        </div>
+        <div class="csl-entry"><em>Eye on Economy NC | Consumer confidence at lowest point since August 2021, nonprofits
+            taking hits; tariffs, inflation cited - ABC11 Raleigh-Durham</em>. (n.d.). Retrieved April 24, 2025, from
+          https://abc11.com/post/eye-economy-nc-consumer-confidence-lowest-point-august-2021-nonprofits-taking-hits-tariffs-inflation-cited/15954757/
+        </div>
+        <div class="csl-entry"><em>Families to Receive Enhanced Benefits to Ensure Food Access | NCDHHS</em>. (n.d.).
+          Retrieved April 24, 2025, from
+          https://www.ncdhhs.gov/news/press-releases/2020/03/30/families-receive-enhanced-benefits-ensure-food-access
+        </div>
+        <div class="csl-entry"><em>February 2024 NC Economy Watch: How Will the Economy Land in 2024? | NC
+            Commerce</em>. (n.d.). Retrieved April 24, 2025, from
+          https://www.commerce.nc.gov/news/the-lead-feed/february-2024-nc-economy-watch</div>
+        <div class="csl-entry">Fermand, E., Kuhnen, C. M., Li, G., &amp; Ben-David, I. (2024). Convening the Experts:
+          Consumer Sentiment vs. Economic Indicators - Frank Hawkins Kenan Institute of Private Enterprise.
+          <em>Https://Kenaninstitute.Unc.Edu/</em>, <em>70</em>(8), 5607&ndash;5625.
+          https://doi.org/10.1287/MNSC.2023.00820
+        </div>
+        <div class="csl-entry">Foley, E., Advisor, F., &amp; Hildebrand, A. (2021). <em>COVID-19 and Housing Security:
+            Assessing Equity &amp; Efficiency Across North Carolina&rsquo;s Emergency Rental Assistance Programs</em>.
+          https://hdl.handle.net/10161/22851</div>
+        <div class="csl-entry"><em>Governor extends evictions moratorium through at least January &bull; NC
+            Newsline</em>. (n.d.). Retrieved April 24, 2025, from
+          https://ncnewsline.com/briefs/governor-extend-evictions-moratorium-through-at-least-january/</div>
+        <div class="csl-entry"><em>Harris wants to stop grocery &ldquo;price gouging.&rdquo; Here&rsquo;s why NC&rsquo;s
+            food costs are still high, News &amp; Observer, The (Raleigh, NC), August 22, 2024, p4A</em>. (n.d.).
+          Retrieved April 24, 2025, from
+          https://infoweb-newsbank-com.libproxy.lib.unc.edu/apps/news/document-view?p=AMNEWS&amp;t=pubname%3ARLOB%21News%2B%2526%2BObserver%252C%2BThe%2B%2528Raleigh%252C%2BNC%2529&amp;sort=YMD_date%3AD&amp;hide_duplicates=2&amp;fld-base-0=alltext&amp;maxresults=60&amp;val-base-0=groceries&amp;docref=news/19B1FA3669F79760
+        </div>
+        <div class="csl-entry"><em>How Important is International Trade to North Carolina? | NC Commerce</em>. (n.d.).
+          Retrieved April 24, 2025, from https://www.commerce.nc.gov/news/the-lead-feed/international-trade-nc</div>
+        <div class="csl-entry"><em>How many households in North Carolina spend too much on housing? | USAFacts</em>.
+          (n.d.). Retrieved April 23, 2025, from
+          https://usafacts.org/answers/how-many-households-in-the-united-states-spend-too-much-on-housing/state/north-carolina/
+        </div>
+        <div class="csl-entry"><em>HPU Poll: Inflation is Biggest Issue in North Carolina Households | High Point
+            University</em>. (n.d.). Retrieved April 24, 2025, from
+          https://www.highpoint.edu/blog/2022/09/hpu-poll-inflation-is-biggest-issue-in-north-carolina-households/</div>
+        <div class="csl-entry"><em>HPU Poll: N.C. Registered Voters See Coronavirus as Major Threat to State, U.S. and
+            World Economies | High Point University</em>. (n.d.). Retrieved April 24, 2025, from
+          https://www.highpoint.edu/blog/2020/07/hpu-poll-n-c-registered-voters-see-coronavirus-as-major-threat-to-state-u-s-and-world-economies/
+        </div>
+        <div class="csl-entry"><em>HPU Poll: North Carolina Consumer Sentiment Drops Amid COVID|19 Pandemic | High Point
+            University</em>. (n.d.). Retrieved April 24, 2025, from
+          https://www.highpoint.edu/blog/2020/05/hpu-poll-north-carolina-consumer-sentiment-drops-amid-covid-19-pandemic/
+        </div>
+        <div class="csl-entry"><em>HPU Poll: North Carolina Consumer Sentiment Improving as Concerns About Prices Ease
+            (Except for Eggs) | High Point University</em>. (n.d.). Retrieved April 24, 2025, from
+          https://www.highpoint.edu/blog/2025/03/hpu-poll-north-carolina-consumer-sentiment-improving-as-concerns-about-prices-ease-except-for-eggs/
+        </div>
+        <div class="csl-entry"><em>HPU Poll: North Carolinians Still Concerned About Inflation, But Consumer Sentiment
+            May Be Improving | High Point University</em>. (n.d.). Retrieved April 24, 2025, from
+          https://www.highpoint.edu/blog/2024/10/hpu-poll-north-carolinians-still-concerned-about-inflation-but-consumer-sentiment-may-be-improving/
+        </div>
+        <div class="csl-entry"><em>Impact of 25% Tariffs on North Carolina&rsquo;s Used Car Market</em>. (n.d.).
+          Retrieved April 24, 2025, from
+          https://kgidealersolutions.com/help/articles/news-and-updates/new-tariffs-effect-used-car-market-north-carolina-april-2025/
+        </div>
+        <div class="csl-entry"><em>Inflation cools in June, fueling hope for interest rate cuts, News &amp; Observer,
+            The (Raleigh, NC), July 12, 2024, p11B</em>. (n.d.). Retrieved April 24, 2025, from
+          https://infoweb-newsbank-com.libproxy.lib.unc.edu/apps/news/document-view?p=AMNEWS&amp;t=pubname%3ARLOB%21News%2B%2526%2BObserver%252C%2BThe%2B%2528Raleigh%252C%2BNC%2529&amp;sort=YMD_date%3AD&amp;hide_duplicates=2&amp;maxresults=60&amp;f=advanced&amp;offset=61&amp;val-base-0=inflation&amp;fld-base-0=Title&amp;docref=news/19ADAF1559871478
+        </div>
+        <div class="csl-entry"><em>Inflation Reduction Act | NC DEQ</em>. (n.d.). Retrieved April 24, 2025, from
+          https://www.deq.nc.gov/energy-climate/state-energy-office/inflation-reduction-act</div>
+        <div class="csl-entry"><em>Inflation Reduction Act One Page Summary | Enhanced Reader</em>. (n.d.).</div>
+        <div class="csl-entry"><em>Is the economic news becoming more negative, and does it matter for consumers?</em>
+          (n.d.). Retrieved April 24, 2025, from
+          https://www.brookings.edu/articles/is-the-economic-news-becoming-more-negative-and-does-it-matter-for-consumers/
+        </div>
+        <div class="csl-entry"><em>Living Wage Calculator - Living Wage Calculation for North Carolina</em>. (n.d.-a).
+          Retrieved April 24, 2025, from https://livingwage.mit.edu/states/37</div>
+        <div class="csl-entry"><em>Living Wage Calculator - Living Wage Calculation for North Carolina</em>. (n.d.-b).
+          Retrieved April 23, 2025, from https://livingwage.mit.edu/states/37</div>
+        <div class="csl-entry"><em>Low-Wage Workers and the K-Shaped Recovery in North Carolina | NC Commerce</em>.
+          (n.d.). Retrieved April 24, 2025, from
+          https://www.commerce.nc.gov/blog/2022/08/30/low-wage-workers-and-k-shaped-recovery-north-carolina</div>
+        <div class="csl-entry"><em>Median Home Prices and Mortgage Payments by County</em>. (n.d.). Retrieved April 23,
+          2025, from
+          https://www.nar.realtor/research-and-statistics/housing-statistics/county-median-home-prices-and-monthly-mortgage-payment
+        </div>
+        <div class="csl-entry"><em>Millennials struggle to buy homes as prices surge, News &amp; Observer, The (Raleigh,
+            NC), March 31, 2024, p15A</em>. (n.d.). Retrieved April 24, 2025, from
+          https://infoweb-newsbank-com.libproxy.lib.unc.edu/apps/news/document-view?p=AMNEWS&amp;t=pubname%3ARLOB%21News%2B%2526%2BObserver%252C%2BThe%2B%2528Raleigh%252C%2BNC%2529&amp;sort=YMD_date%3AD&amp;fld-nav-0=YMD_date&amp;val-nav-0=2024%20-%202024&amp;hide_duplicates=2&amp;maxresults=60&amp;f=advanced&amp;offset=61&amp;val-base-0=prices&amp;fld-base-0=Title&amp;docref=news/19828495936364E8
+        </div>
+        <div class="csl-entry"><em>Months later, used car prices still skyrocketing | CBS 17</em>. (n.d.). Retrieved
+          April 24, 2025, from
+          https://www.cbs17.com/news/cbs17-investigates/months-later-used-car-prices-still-skyrocketing/</div>
+        <div class="csl-entry"><em>NC gas prices hit highest increase in seven years - ABC11 Raleigh-Durham</em>.
+          (n.d.). Retrieved April 23, 2025, from https://abc11.com/gas-prices-north-carolina-fuel-driving/11426254/
+        </div>
+        <div class="csl-entry"><em>NC voters split on economic outlook, but largely feeling OK about the future, WRAL
+            News Poll shows</em>. (n.d.). Retrieved April 24, 2025, from
+          https://www.wral.com/story/nc-voters-split-on-economic-outlook-but-largely-feeling-ok-about-the-future-wral-news-poll-shows/21616538/
+        </div>
+        <div class="csl-entry"><em>(No Title)</em>. (1990).</div>
+        <div class="csl-entry"><em>North Carolina Total Gasoline Wholesale/Resale Price by Refiners (Dollars per
+            Gallon)</em>. (n.d.). Retrieved April 23, 2025, from
+          https://www.eia.gov/dnav/pet/hist/LeafHandler.ashx?n=PET&amp;s=EMA_EPM0_PWG_SNC_DPG&amp;f=M</div>
+        <div class="csl-entry"><em>Price check on 10 grocery staples after inflation, Charlotte Observer, The (NC), June
+            14, 2022, p1A</em>. (n.d.). Retrieved April 24, 2025, from
+          https://infoweb-newsbank-com.libproxy.lib.unc.edu/apps/news/document-view?p=AMNEWS&amp;t=pubname%3ACHOB%21Charlotte%2BObserver%252C%2BThe%2B%2528NC%2529&amp;sort=YMD_date%3AD&amp;fld-nav-0=YMD_date&amp;val-nav-0=2022%20-%202022&amp;hide_duplicates=2&amp;maxresults=60&amp;f=advanced&amp;val-base-0=inflation&amp;fld-base-0=Title&amp;docref=news/18AA4ED91CC762C8
+        </div>
+        <div class="csl-entry"><em>Regional Price Parities: All Items for North Carolina (NCRPPALL) | FRED | St. Louis
+            Fed</em>. (n.d.). Retrieved April 24, 2025, from https://fred.stlouisfed.org/series/NCRPPALL</div>
+        <div class="csl-entry"><em>Regional Price Parities: Goods for North Carolina (NCRPPGOOD) | FRED | St. Louis
+            Fed</em>. (n.d.). Retrieved April 24, 2025, from https://fred.stlouisfed.org/series/NCRPPGOOD</div>
+        <div class="csl-entry"><em>Regional Price Parities: Services: Housing: Metropolitan Portion for North Carolina
+            (NCMPRPPSERVERENT) | FRED | St. Louis Fed</em>. (n.d.). Retrieved April 24, 2025, from
+          https://fred.stlouisfed.org/series/NCMPRPPSERVERENT</div>
+        <div class="csl-entry"><em>Retail pricing and promotions strategies | Datasembly Grocery Price Index</em>.
+          (n.d.). Retrieved April 24, 2025, from https://datasembly.com/grocery-price-index/</div>
+        <div class="csl-entry"><em>September 2024 NC Economy Watch: The Pros and Cons of a Hot Housing Market | NC
+            Commerce</em>. (n.d.). Retrieved April 24, 2025, from
+          https://www.commerce.nc.gov/news/the-lead-feed/september-2024-nc-economy-watch</div>
+        <div class="csl-entry">Shapiro, A. H., Sudhof, M., &amp; Wilson, D. J. (2022). Measuring news sentiment.
+          <em>Journal of Econometrics</em>, <em>228</em>(2), 221&ndash;243.
+          https://doi.org/10.1016/j.jeconom.2020.07.053
+        </div>
+        <div class="csl-entry"><em>State Inflation Tracker: August 2022 - State Inflation Tracker: August 2022 - United
+            States Joint Economic Committee</em>. (n.d.). Retrieved April 24, 2025, from
+          https://www.jec.senate.gov/public/index.cfm/republicans/analysis?id=97F0C52A-69A8-4D30-A93C-AF327BC4FCEA</div>
+        <div class="csl-entry"><em>Tariffs could have impact North Carolina businesses</em>. (n.d.). Retrieved April 24,
+          2025, from https://www.wxii12.com/article/tariffs-impact-north-carolina-triad-businesses/64423563</div>
+        <div class="csl-entry"><em>Tariffs will raise prices, it&rsquo;s just a matter of how much, Atlanta Fed says,
+            News &amp; Observer, The (Raleigh, NC), March 3, 2025, p12A</em>. (n.d.). Retrieved April 24, 2025, from
+          https://infoweb-newsbank-com.libproxy.lib.unc.edu/apps/news/document-view?p=AMNEWS&amp;t=pubname%3ARLOB%21News%2B%2526%2BObserver%252C%2BThe%2B%2528Raleigh%252C%2BNC%2529&amp;sort=YMD_date%3AD&amp;fld-nav-0=YMD_date&amp;val-nav-0=2025%20-%202025&amp;hide_duplicates=2&amp;maxresults=60&amp;f=advanced&amp;offset=61&amp;val-base-0=prices&amp;fld-base-0=Title&amp;docref=news/19F19969D697C870
+        </div>
+        <div class="csl-entry"><em>The economic surge feels like a drag? Your state may be underperforming - ABC
+            News</em>. (n.d.). Retrieved April 24, 2025, from
+          https://abcnews.go.com/Business/economic-surge-feels-drag-state-underperforming/story?id=106997917</div>
+        <div class="csl-entry"><em>Total Wages and Salaries in North Carolina | FRED | St. Louis Fed</em>. (n.d.).
+          Retrieved April 24, 2025, from https://fred.stlouisfed.org/graph/?g=4VNM</div>
+        <div class="csl-entry"><em>Triangle Housing: A Look at Affordability</em>. (n.d.). Retrieved April 24, 2025,
+          from https://doorifymls.com/news/a-look-at-housing-affordability/35</div>
+        <div class="csl-entry"><em>Trump pledged to bring down food prices on Day One. Instead, eggs are getting more
+            expensive | CNN Business</em>. (n.d.). Retrieved April 24, 2025, from
+          https://www.cnn.com/2025/01/28/economy/trump-inflation-price-promises/index.html</div>
+        <div class="csl-entry"><em>Trump&rsquo;s tariffs could disrupt WNC&rsquo;s housing and tourism, experts
+            warn</em>. (n.d.). Retrieved April 24, 2025, from
+          https://wlos.com/news/local/president-donald-trump-tariffs-disrupt-western-north-carolina-service-tourism-sectors-experts-warn
+        </div>
+        <div class="csl-entry"><em>US Consumer Confidence</em>. (n.d.). Retrieved April 24, 2025, from
+          https://www.conference-board.org/topics/consumer-confidence</div>
+        <div class="csl-entry"><em>US inflation dips from 4-decade high but still causing pain, News &amp; Observer, The
+            (Raleigh, NC), May 12, 2022, p8A</em>. (n.d.). Retrieved April 24, 2025, from
+          https://infoweb-newsbank-com.libproxy.lib.unc.edu/apps/news/document-view?p=AMNEWS&amp;t=pubname%3ARLOB%21News%2B%2526%2BObserver%252C%2BThe%2B%2528Raleigh%252C%2BNC%2529&amp;sort=YMD_date%3AD&amp;fld-nav-0=YMD_date&amp;val-nav-0=2022%20-%202022&amp;hide_duplicates=2&amp;maxresults=60&amp;f=advanced&amp;offset=61&amp;val-base-0=inflation&amp;fld-base-0=Title&amp;docref=news/189F6DA7B62626F0
+        </div>
+        <div class="csl-entry">Walden, M. L., &amp; Reynolds, W. N. (n.d.). <em>2020 ECONOMIC OUTLOOK: DOWN OR JUST
+            SLOWDOWN?</em></div>
+        <div class="csl-entry"><em>Weekly U.S. Regular All Formulations Retail Gasoline Prices (Dollars per
+            Gallon)</em>. (n.d.). Retrieved April 24, 2025, from
+          https://www.eia.gov/dnav/pet/hist/LeafHandler.ashx?n=PET&amp;s=EMM_EPMR_PTE_NUS_DPG&amp;f=W</div>
+        <div class="csl-entry"><em>What Drives U.S. Import Price Inflation? | Enhanced Reader</em>. (n.d.).</div>
+        <div class="csl-entry"><em>What is the average wage in North Carolina? | USAFacts</em>. (n.d.). Retrieved April
+          24, 2025, from https://usafacts.org/answers/what-is-the-average-wage-in-the-us/state/north-carolina/</div>
+        <div class="csl-entry"><em>Where gas prices are likely to rise on heels of Trump&rsquo;s tariffs</em>. (n.d.).
+          Retrieved April 24, 2025, from
+          https://finance.yahoo.com/news/where-gas-prices-are-likely-to-rise-on-heels-of-trumps-tariffs-173413230.html
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

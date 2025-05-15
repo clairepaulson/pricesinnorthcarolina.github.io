@@ -1,0 +1,1022 @@
+body {
+  width: 1440px;
+  height: 1121px;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+}
+
+h2 {
+  font-family: "Nothing You Could Do";
+  font-size: 32pt;
+  padding: 0px;
+}
+
+p {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 16pt;
+}
+
+#background-1 {
+  width: 1443px;
+  height: 1438px;
+  position: absolute;
+  position: -284px 0px -33px -3px;
+  z-index: 0;
+}
+
+#background-2,
+#background-3 {
+  display: none;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 13;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.receipt-modal-content {
+  width: 440px;
+  height: 930px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url(receipt.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top -40px left -85px;
+}
+
+#receipt-modal-text {
+  max-width: 270px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+
+}
+
+h3 {
+  font-family: "Alexandria";
+  font-weight: bold;
+  font-size: 20pt;
+  margin: 0px;
+}
+
+h4 {
+  font-family: "VT323";
+  font-size: 20pt;
+  margin: 0px;
+}
+
+#receipt-modal-text p {
+  font-family: "VT323";
+  font-size: 16pt;
+}
+
+#receipt-modal-text span {
+  font-family: "VT323";
+  font-size: 16pt;
+}
+
+.close-modal {
+  color: #aaa;
+  padding-left: 250px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.close-modal:hover,
+.close-modal:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#category-article {
+  max-height: 60%;
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: black lightgray;
+}
+
+#overview {
+  position: relative;
+  top: 50px;
+  left: 3px;
+  width: 881.1px;
+  height: 748px;
+}
+
+#overview img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  -webkit-filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.25));
+  filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.25));
+  z-index: 2;
+}
+
+#overview-background {
+  width: 556.6px;
+  height: 411.4px;
+  padding: 60px;
+  margin: 50px;
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  background-color: white;
+  z-index: 1;
+}
+
+#overview-content {
+  width: 556.6px;
+  height: 460px;
+  top: 40px;
+  left: 40px;
+  padding: 0px 50px 20px 20px;
+  margin: 90px 93px 0px 93px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: #BFA575 #565956;
+  position: absolute;
+  z-index: 10;
+}
+
+#instructions {
+  width: 312.4px;
+  height: 468.6px;
+  position: absolute;
+  top: 150px;
+  left: 855px;
+  z-index: 1;
+
+}
+
+#instructions img {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  -webkit-filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.25));
+  filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.25));
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+#instructions-content {
+  width: 200px;
+  height: 260px;
+  position: absolute;
+  top: 150px;
+  left: 60px;
+  z-index: 2;
+  font-family: "Nothing You Could Do";
+  font-size: 16pt;
+}
+
+#calendar {
+  width: 498.891px;
+  height: 333px;
+  position: absolute;
+  top: 800px;
+  left: 41px;
+  z-index: 1;
+
+}
+
+#deskcalendar {
+  width: 100%;
+  position: relative;
+  -webkit-filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.25));
+  filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.25));
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+#wallcalendar {
+  display: none;
+}
+
+#calendar-contents {
+  width: 275px;
+  height: 145px;
+  position: absolute;
+  top: 90px;
+  left: 116px;
+  z-index: 2;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#calendar-contents svg {
+  fill: none;
+}
+
+#year {
+  font-family: "Porter Sans Block";
+  font-size: 60pt;
+  max-width: 60%;
+  padding-left: 22px;
+  transform: rotate(-5deg);
+  overflow-wrap: break-word;
+  line-height: 75px;
+}
+
+#svg-layer {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 9;
+}
+
+#leftarrow-svg {
+  width: 27.5px;
+  height: 42.5px;
+  position: absolute;
+  left: 165.5px;
+  top: 958.6px;
+  fill: #AA0B0B;
+  cursor: pointer;
+}
+
+#rightarrow-svg {
+  width: 26.5px;
+  height: 42px;
+  position: absolute;
+  left: 404.5px;
+  top: 935.5px;
+  fill: #AA0B0B;
+  cursor: pointer;
+}
+
+#lamp {
+  width: 326px;
+  height: 489px;
+  position: absolute;
+  left: 945px;
+  top: 665px;
+  z-index: 2;
+}
+
+#stethoscope {
+  width: 475.442px;
+  height: 317px;
+  position: absolute;
+  left: 453px;
+  top: 866px;
+  z-index: 3;
+}
+
+#books {
+  width: 289.427px;
+  height: 219px;
+  position: absolute;
+  left: 819px;
+  top: 910px;
+  z-index: 4;
+}
+
+#eggs {
+  width: 254.921px;
+  height: 192px;
+  position: absolute;
+  left: 603px;
+  top: 1002px;
+  z-index: 5;
+}
+
+#keys {
+  width: 175px;
+  height: 140px;
+  position: absolute;
+  left: 819px;
+  top: 1043px;
+  z-index: 6;
+}
+
+#car {
+  width: 163.48px;
+  height: 109px;
+  position: absolute;
+  left: 964px;
+  top: 1074px;
+  z-index: 7;
+}
+
+#legos {
+  width: 261.611px;
+  height: 204px;
+  position: absolute;
+  left: 1054px;
+  top: 1011px;
+  z-index: 8;
+}
+
+.innerimage {
+  width: 100%;
+  position: relative;
+  -webkit-filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.25));
+  filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.25));
+  top: 0;
+  left: 0;
+}
+
+#lamp-svg {
+  width: 251.5px;
+  height: 351.5px;
+  position: absolute;
+  left: 980.5px;
+  top: 734.5px;
+  fill: white;
+  fill-opacity: 0%;
+  cursor: pointer;
+}
+
+#stethoscope-svg {
+  width: 283.5px;
+  height: 133px;
+  position: absolute;
+  left: 564px;
+  top: 948px;
+  fill: white;
+  fill-opacity: 0%;
+  cursor: pointer;
+}
+
+#books-svg {
+  width: 249.5px;
+  height: 197px;
+  position: absolute;
+  left: 839px;
+  top: 921px;
+  fill: white;
+  fill-opacity: 0%;
+  cursor: pointer;
+}
+
+#eggs-svg {
+  width: 263px;
+  height: 150px;
+  position: absolute;
+  left: 600px;
+  top: 1035px;
+  fill: white;
+  fill-opacity: 0%;
+  cursor: pointer;
+}
+
+#keys-svg {
+  width: 121px;
+  height: 128.5px;
+  position: absolute;
+  left: 842.5px;
+  top: 1049.5px;
+  fill: white;
+  fill-opacity: 0%;
+  cursor: pointer;
+}
+
+#car-svg {
+  width: 142px;
+  height: 77.5px;
+  position: absolute;
+  left: 973px;
+  top: 1093.5px;
+  fill: white;
+  fill-opacity: 0%;
+  cursor: pointer;
+}
+
+#legos-svg {
+  width: 123.5px;
+  height: 86px;
+  position: absolute;
+  left: 1124.5px;
+  top: 1071.5px;
+  fill: white;
+  fill-opacity: 0%;
+  cursor: pointer;
+}
+
+#sources {
+  width: 357px;
+  height: 238px;
+  position: absolute;
+  left: 5px;
+  top: 1210px;
+  z-index: 10;
+  cursor: pointer;
+}
+
+#sources-label {
+  width: 100px;
+  position: absolute;
+  top: 73px;
+  left: 135px;
+  font-family: "Nothing You Could Do";
+  font-size: 20pt;
+}
+
+#sources:hover .innerimage {
+  width: 100%;
+  height: 95%;
+  top: 3px;
+  -webkit-filter: drop-shadow(12px 12px 12px rgba(244, 237, 193, 0.5));
+  filter: drop-shadow(12px 12px 12px rgba(244, 237, 193, 0.5));
+}
+
+.sources-modal-content {
+  width: 428px;
+  height: 482px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url(postitcrop.png);
+  background-size: cover;
+  background-position: top -10px left -50px;
+  background-repeat: no-repeat;
+}
+
+#sources-modal-text {
+  width: 380px;
+  height: 380px;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: black rgb(172, 156, 113);
+}
+
+#sources-modal-text h3 {
+  font-family: "Nothing You Could Do";
+  font-size: 20pt;
+}
+
+#sources-modal-text ol {
+  margin: 0px;
+  padding: 0px;
+}
+
+.csl-entry {
+  word-wrap: break-word;
+  padding: 10px 10px 0px 0px;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 16pt;
+}
+
+#close-sources {
+  padding-left: 394px;
+  color: rgb(172, 156, 113);
+}
+
+#close-sources:hover,
+#close-sources:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media (max-width: 800px) {
+  body {
+    width: 800px;
+    height: 1133px;
+  }
+
+  #background-1 {
+    width: 1137px;
+    height: 1133px;
+    position: 0px -77px 0px -260px;
+    z-index: 0;
+  }
+
+  #overview {
+    width: 566.69px;
+    height: 481px;
+    top: 14px;
+    left: -24px;
+  }
+
+
+  #overview-background {
+    width: 424px;
+    height: 357px;
+    padding: 0px;
+    margin: 0px;
+    top: 58px;
+    left: 71px;
+  }
+
+  #overview-content {
+    width: 360px;
+    height: 266px;
+    margin: 0px;
+    padding: 25px;
+    top: 80px;
+    left: 71px;
+  }
+
+  h2 {
+    font-size: 20pt;
+    margin: 0px;
+  }
+
+  #instructions {
+    width: 206.667px;
+    height: 310px;
+    top: 72px;
+    left: 520px;
+  }
+
+  #instructions-content {
+    width: 133px;
+    height: 140px;
+    top: 120px;
+    left: 37px;
+    font-size: small;
+  }
+
+  #calendar {
+    width: 275.58px;
+    height: 212px;
+    top: 482px;
+    left: 76px;
+
+
+  }
+
+  #deskcalendar {
+    display: none;
+  }
+
+  #wallcalendar {
+    display: inline-block;
+    width: 100%;
+    position: relative;
+    -webkit-filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.25));
+    filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.25));
+    top: 0;
+    left: 0;
+    z-index: 2;
+  }
+
+  #calendar-contents {
+    width: 250px;
+    height: 145px;
+    top: 40px;
+    left: 29px;
+  }
+
+  #year {
+    font-size: 40pt;
+    padding-left: 22px;
+    transform: rotate(0deg);
+    line-height: 50px;
+  }
+
+  #leftarrow-svg {
+    transform: rotate(5deg);
+    left: 98px;
+    top: 575px;
+  }
+
+  #rightarrow-svg {
+    transform: rotate(5deg);
+    left: 297px;
+    top: 575px;
+  }
+
+  #lamp {
+    width: 348px;
+    height: 522px;
+    left: 419px;
+    top: 436px;
+  }
+
+  #lamp-svg {
+    width: 270px;
+    height: 367px;
+    left: 456px;
+    top: 511.5px;
+  }
+
+  #stethoscope {
+    width: 508.438px;
+    height: 339px;
+    left: -101px;
+    top: 655px;
+  }
+
+  #stethoscope-svg {
+    width: 304;
+    height: 138;
+    top: 741.5px;
+    left: 10px;
+
+  }
+
+  #books {
+    width: 307.93px;
+    height: 233px;
+    left: 283px;
+    top: 693px;
+  }
+
+  #books-svg {
+    width: 267;
+    height: 206;
+    top: 706.5px;
+    left: 305px;
+
+  }
+
+  #eggs {
+    width: 272.182px;
+    height: 205px;
+    left: 49px;
+    top: 790px;
+  }
+
+  #eggs-svg {
+    width: 282;
+    height: 155;
+    top: 826.5px;
+    left: 48px;
+
+  }
+
+  #keys {
+    width: 187.489px;
+    height: 150px;
+    left: 282px;
+    top: 833px;
+  }
+
+  #keys-svg {
+    width: 129;
+    height: 134;
+    top: 840.5px;
+    left: 309px;
+    border-width: 1px;
+  }
+
+  #car {
+    width: 172.479px;
+    height: 115px;
+    left: 439px;
+    top: 867px;
+  }
+
+  #car-svg {
+    width: 153;
+    height: 81;
+    top: 886.5px;
+    left: 448px;
+
+  }
+
+  #legos {
+    width: 279.564px;
+    height: 218px;
+    left: 539px;
+    top: 798px;
+  }
+
+  #legos-svg {
+    width: 132;
+    height: 90;
+    top: 863.5px;
+    left: 611px;
+  }
+
+  #sources {
+    width: 343.45806884765625px;
+    height: 229px;
+    top: 958px;
+    left: -86px;
+
+  }
+
+  #sources-label {
+    font-size: 18pt;
+    top: 65px;
+    left: 134px;
+  }
+
+}
+
+@media (max-width: 550px) {
+  body {
+    width: 550px;
+    height: 2168px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+
+  #background-1 {
+    width: 939px;
+    height: 936px;
+    position: absolute;
+    left: -99;
+    top: 0;
+    z-index: 0;
+  }
+
+  #background-2 {
+    display: block;
+    position: absolute;
+    width: 574px;
+    height: 614px;
+    top: 939px;
+    left: 0px;
+    z-index: 1;
+  }
+
+  #background-3 {
+    display: block;
+    position: absolute;
+    width: 574px;
+    height: 614px;
+    top: 1553px;
+    left: -24px;
+    z-index: 1;
+  }
+
+  #overview {
+    width: 352px;
+    height: 299px;
+    left: -15px;
+    top: 0px;
+  }
+
+
+  #overview-background {
+    width: 263px;
+    height: 222px;
+    top: 36px;
+    left: 31px;
+    padding: 0px;
+    margin: 0px;
+    z-index: 1;
+  }
+
+  #overview-content {
+    width: 227px;
+    height: 197px;
+    top: 55px;
+    left: 33px;
+    padding: 0px 22px;
+    margin: 0px;
+  }
+
+  h2 {
+    font-size: 18pt;
+    margin: 0px;
+  }
+
+  #instructions {
+    width: 200px;
+    height: 300px;
+    top: 188px;
+    left: 56px;
+    z-index: 0;
+
+  }
+
+  #instructions-content {
+    width: 133px;
+    height: 140px;
+    top: 120px;
+    left: 37px;
+    font-size: small;
+  }
+
+  #calendar {
+    width: 153px;
+    height: 118px;
+    top: 481px;
+    left: 78px;
+
+
+
+  }
+
+  #deskcalendar {
+    display: none;
+  }
+
+  #wallcalendar {
+    display: inline-block;
+    width: 100%;
+    position: relative;
+    -webkit-filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.25));
+    filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.25));
+    top: 0;
+    left: 0;
+    z-index: 2;
+  }
+
+  #calendar-contents {
+    width: 153px;
+    height: 118px;
+    top: 4px;
+    left: 5px;
+  }
+
+  #year {
+    font-size: 25pt;
+    transform: rotate(0deg);
+    line-height: 30px;
+  }
+
+  #leftarrow-svg {
+    transform: rotate(5deg);
+    width: 20px;
+    top: 520px;
+    left: 89.95px;
+
+  }
+
+  #rightarrow-svg {
+    transform: rotate(5deg);
+    width: 20px;
+    top: 520px;
+    left: 200px;
+  }
+
+  #lamp {
+    width: 272px;
+    height: 409px;
+    top: 1000px;
+    left: 37px;
+
+  }
+
+
+  #lamp-svg {
+    width: 200px;
+    height: 330px;
+    top: 1056px;
+    left: 69px;
+    border-width: 1px;
+
+  }
+
+  #stethoscope {
+    width: 418.973px;
+    height: 279.35px;
+    ;
+    top: 583px;
+    left: -94px;
+    z-index: 5;
+
+
+  }
+
+  #stethoscope-svg {
+    width: 230px;
+    height: 120px;
+    top: 670px;
+    left: 11px;
+
+  }
+
+  #books {
+    width: 255px;
+    height: 193px;
+    top: 1823px;
+    left: -12px;
+
+  }
+
+  #books-svg {
+    width: 300px;
+    height: 178px;
+    top: 1832px;
+    left: -80px;
+
+
+
+  }
+
+  #eggs {
+    width: 216px;
+    height: 163px;
+    left: 108px;
+    top: 583px;
+  }
+
+  #eggs-svg {
+    width: 223px;
+    height: 127px;
+    top: 610px;
+    left: 104px;
+
+  }
+
+  #keys {
+    width: 146;
+    height: 117;
+    top: 1292px;
+    left: 163px;
+
+  }
+
+  #keys-svg {
+    width: 102px;
+    height: 106px;
+    top: 1298px;
+    left: 182px;
+  }
+
+  #car {
+    width: 144px;
+    height: 96px;
+    top: 1920px;
+    left: 188px;
+
+  }
+
+  #car-svg {
+    width: 122px;
+    height: 67px;
+    top: 1937px;
+    left: 199px;
+
+
+  }
+
+  #legos {
+    width: 211px;
+    height: 165px;
+    top: 1288px;
+    left: 0px;
+
+  }
+
+  #legos-svg {
+    width: 101px;
+    height: 68px;
+    top: 1337px;
+    left: 55px;
+
+  }
+
+  #sources {
+    width: 282px;
+    height: 188px;
+    top: 2004px;
+    left: -71px;
+  }
+
+  #sources-label {
+    font-size: 16pt;
+    top: 55px;
+    left: 108px;
+  }
+
+  .sources-modal-content {
+    width: 300px;
+    height: 320px;
+    padding-top: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(postitcrop.png);
+    background-size: cover;
+    background-position: top 10px left -5px;
+    background-repeat: no-repeat;
+  }
+
+  #sources-modal-text {
+    max-width: 85%;
+    max-height: 80%;
+  }
+
+  #close-sources {
+    padding-left: 260px;
+    color: rgb(172, 156, 113);
+  }
+}
